@@ -1,5 +1,5 @@
-# testing-openapi-generator-cli
-Testing some openapi-generator-cli generator edge cases.
+# A Bug in openapi-generator
+Demonstrating a bug in openapi-generator https://github.com/OpenAPITools/openapi-generator/issues/20879
 
 ## ✅ No oneOf
 Sample spec without using any `oneOf`.  
