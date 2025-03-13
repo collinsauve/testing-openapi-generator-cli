@@ -1,0 +1,12 @@
+extends:
+  - default.yaml
+apis:
+  test1-no-union:
+    root: ../specs/test1-no-union.yaml
+  test2-union-with-one-type:
+    root: ../specs/test2-union-with-one-type.yaml
+  test3-union-with-two-types:
+    root: ../specs/test3-union-with-two-types.yaml
+  test4-union-with-one-type-and-null:
+    root: ../specs/test4-union-with-one-type-and-null.yaml
+

@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+npx @redocly/cli@1.33.1 lint "${1}" --config .redocly/config.yaml

@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+set -euo pipefail
+__dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+
+"${__dir}/lint" "${1}"
+"${__dir}/generate" "${__dir}/../specs/${1}.yaml"

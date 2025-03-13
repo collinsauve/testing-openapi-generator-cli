@@ -1,0 +1,38 @@
+openapi: 3.1.0
+info:
+  title: A test spec
+  version: '1'
+paths:
+  /foo:
+    post:
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/FooPostRequest'
+      responses:
+        '204':
+          description: OK
+components:
+  schemas:
+    FooPostRequest:
+      type: object
+      oneOf:
+        - $ref: '#/components/schemas/AUnionedType'
+        - $ref: '#/components/schemas/AnotherUnionedType'
+      discriminator:
+        propertyName: the-discriminator
+        mapping:
+          a-unioned-type: '#/components/schemas/AUnionedType'
+          another-unioned-type: '#/components/schemas/AnotherUnionedType'
+    AUnionedType:
+      properties:
+        the-discriminator: 
+          type: string
+          const: a-unioned-type
+    AnotherUnionedType:
+      properties:
+        the-discriminator: 
+          type: string
+          const: another-unioned-type          
